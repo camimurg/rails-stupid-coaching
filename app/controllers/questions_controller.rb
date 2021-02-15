@@ -5,6 +5,7 @@ class QuestionsController < ApplicationController
 
   def answer
     @question = params[:question]
+    take_screenshot
     if @question == 'I am going to work!'
       @answer = 'Great'
     elsif @question.ends_with?('?')
